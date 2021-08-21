@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".AddFoodActivity"
+    android:background="@drawable/first"
+    android:padding="20dp">
+
+    <EditText
+        android:inputType="text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/food_name_adding"
+        android:hint="@string/taom_nomi"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/edite_food_ingridients"
+        android:background="@drawable/edite_background"
+        android:textStyle="italic"
+        android:padding="20dp"
+        android:importantForAutofill="no" />
+
+    <EditText
+        android:inputType="text"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.2"
+        android:gravity="start"
+        android:id="@+id/edite_food_ingridients"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/edite_preparations"
+        app:layout_constraintTop_toBottomOf="@id/food_name_adding"
+        android:hint="@string/kerakli_maxsulotlar"
+        android:background="@drawable/edite_background"
+        android:padding="20dp"
+        android:textAlignment="textStart"
+        android:textStyle="italic"
+        android:importantForAutofill="no" />
+
+    <EditText
+        android:inputType="text"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btn_save"
+        app:layout_constraintTop_toBottomOf="@id/edite_food_ingridients"
+        android:id="@+id/edite_preparations"
+        android:padding="20dp"
+        android:background="@drawable/edite_background"
+        android:hint="@string/taom_tayyorlash_tartibi"
+        android:textStyle="italic"
+        android:autofillHints="0"
+        app:layout_constraintHeight_percent="0.4"
+        android:gravity="start"
+        />
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.08"
+        app:layout_constraintWidth_percent="0.5"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edite_preparations"
+        android:text="@string/save"
+        android:textAllCaps="false"
+        android:backgroundTint="@color/green"
+        app:layout_constraintHorizontal_bias="0.9"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
